@@ -1,4 +1,4 @@
-# SITRACK — Sistem Monitoring dan Tracking Berkas Pradaftar (ATR/BPN)
+# SITPRA — Sistem Monitoring dan Tracking Berkas Pradaftar (ATR/BPN)
 
 Aplikasi web untuk memantau perjalanan berkas pendaftaran tanah dari Loket → Seksi 1 (Survei & Pemetaan) → Seksi 2 (Penetapan Hak & Pendaftaran), lengkap dengan jejak audit (siapa mengembalikan/meneruskan, kapan, dan catatannya).
 
@@ -92,7 +92,7 @@ Sudah diuji end-to-end (lint `php -l` pada seluruh file + simulasi alur penuh di
 
 | Username   | Password   | Role &amp; Bagian                                        |
 |------------|------------|----------------------------------------------------------|
-| admin      | bpn12345   | Admin (Administrator)                                   |
+| admin      | bpn12345   | Admin                                                    |
 | loket1     | bpn12345   | Loket (Petugas Loket)                                   |
 | loket2     | bpn12345   | Loket (Petugas Loket)                                   |
 | seksi1_1   | bpn12345   | Seksi 1 (Survei & Pemetaan)                             |

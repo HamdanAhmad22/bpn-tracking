@@ -21,7 +21,7 @@ if ($user && isset($conn)) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?= e($pageTitle) ?> · SITRACK BPN</title>
+<title><?= e($pageTitle) ?> · SITPRA BPN</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -200,8 +200,8 @@ a.btn-warning i {
     <div class="topbar-brand">
         <img src="<?= baseUrl('assets/img/logo-bpn-white.png') ?>?v=<?= time() ?>" alt="Logo ATR/BPN" class="brand-logo">
         <div class="brand-text">
-            <span class="brand-mark">SITRACK</span>
-            <span class="brand-sub">Sistem Tracking Berkas Pradaftar</span>
+            <span class="brand-mark">SITPRA</span>
+            <span class="brand-sub">Sistem Monitoring dan Tracking Berkas Pradaftar</span>
         </div>
     </div>
 
@@ -276,7 +276,7 @@ a.btn-warning i {
         <!-- User Dropdown -->
         <div class="topbar-user dropdown">
             <button class="btn-user dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="user-avatar"><?= e(strtoupper(substr($user['nama_lengkap'] ?? '?', 0, 1))) ?></span>
+                <span class="user-avatar">BPN</span>
                 <span class="user-info d-none d-md-flex">
                     <strong><?= e($user['nama_lengkap'] ?? '') ?></strong>
                     <small><?= e(roleLabel($user['role'] ?? '')) ?></small>

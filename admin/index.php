@@ -242,7 +242,7 @@ require_once __DIR__ . '/../includes/sidebar.php';
                 <a href="?posisi=seksi_2<?= $q ? '&q='.urlencode($q) : '' ?><?= $sort !== 'lama' ? '&sort='.urlencode($sort) : '' ?>" class="btn <?= $posisiFil === 'seksi_2' ? 'btn-primary text-white' : 'btn-outline-primary' ?>">
                     Penetapan Hak &amp; Pendaftaran (<?= $totalSeksi2 ?>)
                 </a>
-                <a href="?posisi=selesai<?= $q ? '&q='.urlencode($q) : '' ?><?= $sort !== 'lama' ? '&sort='.urlencode($sort) : '' ?>" class="btn <?= $posisiFil === 'selesai' ? 'btn-success text-white' : 'btn-outline-secondary' ?>">
+                <a href="?posisi=selesai<?= $q ? '&q='.urlencode($q) : '' ?><?= $sort !== 'lama' ? '&sort='.urlencode($sort) : '' ?>" class="btn <?= $posisiFil === 'selesai' ? 'btn-success text-white' : 'btn-outline-success' ?>">
                     <i class="bi bi-check-circle-fill me-1"></i>Selesai (<?= $totalSelesai ?>)
                 </a>
                 <a href="?posisi=warning<?= $q ? '&q='.urlencode($q) : '' ?><?= $sort !== 'lama' ? '&sort='.urlencode($sort) : '' ?>" class="btn <?= $posisiFil === 'warning' ? 'btn-warning text-dark fw-semibold' : 'btn-outline-warning text-dark' ?>" title="Berkas yang sisa waktu pengerjaannya kurang dari 1 hari (zona waspada kuning)">
@@ -298,8 +298,8 @@ require_once __DIR__ . '/../includes/sidebar.php';
                     </ul>
                 </div>
 
-                <?php if ($q !== '' || $sort !== 'lama' || $posisiFil !== 'semua'): ?>
-                    <a href="index.php" class="btn btn-sm btn-outline-secondary text-nowrap" title="Reset pencarian dan urutan">
+                <?php if ($sort !== 'lama'): ?>
+                    <a href="?posisi=<?= urlencode($posisiFil) ?><?= $q ? '&q='.urlencode($q) : '' ?>" class="btn btn-sm btn-outline-secondary text-nowrap btn-reset-sort" title="Reset urutan berkas ke awal (Paling Lama di-Input)">
                         <i class="bi bi-arrow-counterclockwise me-1"></i>Reset
                     </a>
                 <?php endif; ?>
@@ -632,7 +632,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     tableCard.addEventListener('click', function(e) {
-        const link = e.target.closest('.card-header .filter-pill-wrapper a, .card-header .btn-group a, .dropdown-menu a.dropdown-item');
+        const link = e.target.closest('.card-header .filter-pill-wrapper a, .card-header .btn-group a, .dropdown-menu a.dropdown-item, a.btn-reset-sort');
         if (!link) return;
         const href = link.getAttribute('href');
         if (href && href.startsWith('?posisi=')) {

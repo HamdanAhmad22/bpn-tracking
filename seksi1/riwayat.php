@@ -9,6 +9,8 @@ if (!in_array($sort, ['default', 'selesai', 'dikembalikan'], true)) {
     $sort = 'default';
 }
 
+$isFiltered = ($q !== '' || $sort !== 'default');
+
 $page    = max(1, (int) ($_GET['page'] ?? 1));
 $perPage = 10;
 
@@ -62,22 +64,24 @@ require_once __DIR__ . '/../includes/sidebar.php';
 </div>
 
 <form class="filter-bar row g-2 align-items-center" method="GET">
-    <div class="col-md-6">
+    <div class="col-12 <?= $isFiltered ? 'col-md-6' : 'col-md-7' ?>">
         <div class="input-group">
             <input type="text" name="q" class="form-control" placeholder="Cari nomor berkas, nama pemohon, jenis layanan, atau sertifikat/desa..." value="<?= e($q) ?>">
             <button class="btn btn-primary" type="submit"><i class="bi bi-search me-1"></i> Cari</button>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-12 <?= $isFiltered ? 'col-md-4' : 'col-md-5' ?>">
         <select name="sort" class="form-select" onchange="this.form.submit()">
             <option value="default" <?= $sort === 'default' ? 'selected' : '' ?>>Urutkan: Waktu Masuk Riwayat (Default)</option>
             <option value="selesai" <?= $sort === 'selesai' ? 'selected' : '' ?>>Urutkan: Berkas Selesai</option>
             <option value="dikembalikan" <?= $sort === 'dikembalikan' ? 'selected' : '' ?>>Urutkan: Kembali ke Pemohon</option>
         </select>
     </div>
-    <div class="col-md-2">
-        <a href="riwayat.php" class="btn btn-outline-secondary w-100">Reset</a>
+    <?php if ($isFiltered): ?>
+    <div class="col-12 col-md-2">
+        <a href="riwayat.php" class="btn btn-outline-secondary w-100" title="Kembalikan semua filter ke default">Reset</a>
     </div>
+    <?php endif; ?>
 </form>
 
 <div class="card">

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SITRACK — Sistem Tracking Berkas Pradaftar ATR/BPN
+   SITPRA — Sistem Monitoring dan Tracking Berkas Pradaftar ATR/BPN
    Token warna terinspirasi identitas kedinasan: navy tua + aksen kuning emas.
    ========================================================================== */
 :root {
@@ -127,7 +127,8 @@ a { text-decoration: none; }
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.95rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
 }
 
 .user-info {
@@ -1025,7 +1026,8 @@ body.sidebar-open {
     .user-avatar {
         width: 32px;
         height: 32px;
-        font-size: 0.85rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.3px;
     }
     .page-container {
         padding: 14px 10px 10px;

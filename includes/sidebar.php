@@ -34,7 +34,7 @@ try {
         <div class="d-flex align-items-center gap-2">
             <img src="<?= baseUrl('assets/img/logo-bpn-white.png') ?>" alt="Logo ATR/BPN" style="width: 28px; height: 28px; object-fit: contain;">
             <div class="d-flex flex-column text-white">
-                <span class="fw-bold" style="font-size: 0.95rem; letter-spacing: 0.02em;">SITRACK</span>
+                <span class="fw-bold" style="font-size: 0.95rem; letter-spacing: 0.02em;">SITPRA</span>
                 <span class="text-white-50" style="font-size: 0.68rem;">ATR/BPN</span>
             </div>
         </div>

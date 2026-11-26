@@ -1,5 +1,5 @@
     <footer class="page-footer">
-        <span>&copy; <?= date('Y') ?> SITRACK &mdash; Sistem Monitoring dan Tracking Berkas Pradaftar, Kantor Pertanahan ATR/BPN.</span>
+        <span>&copy; <?= date('Y') ?> SITPRA &mdash; Sistem Monitoring dan Tracking Berkas Pradaftar, Kantor Pertanahan Kabupaten Bone Bolango.</span>
     </footer>
 </div>
 </main>

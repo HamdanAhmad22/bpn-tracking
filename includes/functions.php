@@ -69,7 +69,7 @@ function roleHome(string $role): string
 function roleLabel(string $role): string
 {
     return match ($role) {
-        'admin'   => 'Administrator',
+        'admin'   => 'Admin',
         'loket'   => 'Loket',
         'seksi_1' => 'Seksi 1 (Survei & Pemetaan)',
         'seksi_2' => 'Seksi 2 (Penetapan Hak & Pendaftaran)',

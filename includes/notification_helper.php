@@ -1,6 +1,6 @@
 <?php
 /**
- * Helper Notifikasi In-App untuk SITRACK BPN
+ * Helper Notifikasi In-App untuk SITPRA BPN
  * Mengelola pembuatan, pembacaan, dan counter notifikasi per-user / per-role.
  */
 

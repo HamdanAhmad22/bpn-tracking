@@ -150,7 +150,7 @@ require_once __DIR__ . '/../includes/sidebar.php';
                     <div class="mb-3">
                         <label class="form-label">Role</label>
                         <select name="role" id="formRole" class="form-select" required>
-                            <option value="admin">Administrator</option>
+                            <option value="admin">Admin</option>
                             <option value="loket">Loket</option>
                             <option value="seksi_1">Seksi 1 (Survei &amp; Pemetaan)</option>
                             <option value="seksi_2">Seksi 2 (Penetapan Hak &amp; Pendaftaran)</option>

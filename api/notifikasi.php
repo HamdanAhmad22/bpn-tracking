@@ -1,6 +1,6 @@
 <?php
 /**
- * Endpoint JSON API untuk In-App Notification SITRACK BPN
+ * Endpoint JSON API untuk In-App Notification SITPRA BPN
  */
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../includes/functions.php';
